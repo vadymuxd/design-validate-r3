@@ -11,7 +11,6 @@ const PILL_CATEGORIES = [
   { key: "ab", label: "A/B Testing" },
 ];
 
-
 export const Homepage = (): JSX.Element => {
   const [selected, setSelected] = useState("usability");
 

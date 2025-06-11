@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  ip        String
+  deviceId  String
+  name      String?
+  createdAt DateTime @default(now())
+}
+
+model Feedback {
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  sentiment  Sentiment
+  deviceId   String
+  ip         String
+}
+
+enum Sentiment {
+  dislike
+  like
+}
