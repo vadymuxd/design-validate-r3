@@ -1,4 +1,4 @@
-import { Tool } from "./tools";
+import { Tool } from "./toolTypes";
 
 export const usabilityTestingTools: Tool[] = [
   {

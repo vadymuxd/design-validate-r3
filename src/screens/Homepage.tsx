@@ -4,8 +4,6 @@ import { ToolCard } from "../components/ui/ToolCard";
 import { GlobalLayout } from "../components/GlobalLayout";
 import { Feedback } from "../components/ui/Feedback";
 import { usabilityTestingTools } from "../data/usabilityTestingTools";
-import { eventTrackingTools } from "../data/eventTrackingTools";
-import { abTestingTools } from "../data/abTestingTools";
 
 const PILL_CATEGORIES = [
   { key: "usability", label: "Usability Testing" },
@@ -13,11 +11,6 @@ const PILL_CATEGORIES = [
   { key: "ab", label: "A/B Testing" },
 ];
 
-const toolsByCategory = {
-  usability: usabilityTestingTools,
-  event: eventTrackingTools,
-  ab: abTestingTools,
-};
 
 export const Homepage = (): JSX.Element => {
   const [selected, setSelected] = useState("usability");
